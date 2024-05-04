@@ -1,0 +1,9 @@
+[package]
+name = "orbbec-bevy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy" }
+orbbec-sdk = { path = "../orbbec-sdk-rs"}
+bytemuck = "1.15.0"
