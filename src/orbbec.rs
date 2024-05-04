@@ -1,8 +1,8 @@
 pub use orbbec_sdk::ob;
-use orbbec_sdk::{ob_color_point, OBSensorType_OB_SENSOR_COLOR};
+use orbbec_sdk::{OBSensorType_OB_SENSOR_COLOR};
 use std::ffi::c_int;
 use std::process::exit;
-use std::ptr::{null_mut, slice_from_raw_parts_mut};
+use std::ptr::{null_mut};
 
 unsafe fn check_error(error: *mut ob::ob_error) {
     if !error.is_null() {
@@ -78,7 +78,7 @@ pub unsafe fn do_the_thing() {
         check_error(error);
         let mut d2cCount = ob::ob_stream_profile_list_count(depthProfiles, &mut error);
         check_error(error);
-        if (d2cCount > 0) {
+        if d2cCount > 0 {
             align_mode = ob::OBAlignMode_ALIGN_D2C_HW_MODE;
         } else {
             // Try find supported depth to color align software mode profile
@@ -91,7 +91,7 @@ pub unsafe fn do_the_thing() {
             check_error(error);
             d2cCount = ob::ob_stream_profile_list_count(depthProfiles, &mut error);
             check_error(error);
-            if (d2cCount > 0) {
+            if d2cCount > 0 {
                 align_mode = ob::OBAlignMode_ALIGN_D2C_SW_MODE;
             }
         }
@@ -122,7 +122,7 @@ pub unsafe fn do_the_thing() {
             check_error(error);
         }
 
-        if (depth_profile.is_null()) {
+        if depth_profile.is_null() {
             // If no matching profile is found, select the default profile.
             depth_profile = ob::ob_stream_profile_list_get_profile(
                 depthProfiles,
@@ -176,7 +176,7 @@ pub unsafe fn do_the_thing() {
                         // get depth value scale
                         let depth_frame: *mut ob::ob_frame = ob::ob_frameset_depth_frame(frameset, &mut error);
                         check_error(error);
-                        if(depth_frame.is_null()) {
+                        if depth_frame.is_null() {
                             continue;
                         }
 
@@ -217,7 +217,7 @@ pub unsafe fn do_the_thing() {
                         }
                         ob::ob_delete_frame(frameset, &mut error);  // Destroy frameSet to reclaim memory
                         check_error(error);
-                        if(points_created) {
+                        if points_created {
                             break;
                         }
                     }
