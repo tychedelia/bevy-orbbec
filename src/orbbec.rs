@@ -11,8 +11,11 @@ unsafe fn check_error(error: *mut ob::ob_error) {
             ob::ob_error_function(error),
             ob::ob_error_args(error),
         );
-        println!("\tmessage: {:?}", ob::ob_error_message(error));
-        println!("\terror type: {:?}", ob::ob_error_exception_type(error));
+        let msg =ob::ob_error_message(error);
+        let msg = std::ffi::CStr::from_ptr(msg).to_str().unwrap();
+        println!("\tmessage: {:?}", msg);
+        let msg = ob::ob_error_exception_type(error);
+        println!("\terror type: {:?}", msg);
         ob::ob_delete_error(error);
         exit(1);
     }
@@ -65,38 +68,38 @@ pub unsafe fn do_the_thing() {
     // Configure depth flow
     let mut depth_profile: *mut ob::ob_stream_profile = null_mut();
     let mut align_mode: ob::OBAlignMode = ob::OBAlignMode_ALIGN_DISABLE;
-    let mut depthProfiles: *mut ob::ob_stream_profile_list = null_mut();
+    let mut depth_profiles: *mut ob::ob_stream_profile_list = null_mut();
 
     if !color_profile.is_null() {
         // Try find supported depth to color align hardware mode profile
-        depthProfiles = ob::ob_get_d2c_depth_profile_list(
+        depth_profiles = ob::ob_get_d2c_depth_profile_list(
             ob_pipeline,
             color_profile,
             ob::OBAlignMode_ALIGN_D2C_HW_MODE,
             &mut error,
         );
         check_error(error);
-        let mut d2cCount = ob::ob_stream_profile_list_count(depthProfiles, &mut error);
+        let mut d2c_count = ob::ob_stream_profile_list_count(depth_profiles, &mut error);
         check_error(error);
-        if d2cCount > 0 {
+        if d2c_count > 0 {
             align_mode = ob::OBAlignMode_ALIGN_D2C_HW_MODE;
         } else {
             // Try find supported depth to color align software mode profile
-            depthProfiles = ob::ob_get_d2c_depth_profile_list(
+            depth_profiles = ob::ob_get_d2c_depth_profile_list(
                 ob_pipeline,
                 color_profile,
                 ob::OBAlignMode_ALIGN_D2C_SW_MODE,
                 &mut error,
             );
             check_error(error);
-            d2cCount = ob::ob_stream_profile_list_count(depthProfiles, &mut error);
+            d2c_count = ob::ob_stream_profile_list_count(depth_profiles, &mut error);
             check_error(error);
-            if d2cCount > 0 {
+            if d2c_count > 0 {
                 align_mode = ob::OBAlignMode_ALIGN_D2C_SW_MODE;
             }
         }
     } else {
-        depthProfiles = ob::ob_pipeline_get_stream_profile_list(
+        depth_profiles = ob::ob_pipeline_get_stream_profile_list(
             ob_pipeline,
             ob::OBSensorType_OB_SENSOR_DEPTH,
             &mut error,
@@ -104,15 +107,15 @@ pub unsafe fn do_the_thing() {
         check_error(error);
     }
 
-    let listCount = ob::ob_stream_profile_list_count(depthProfiles, &mut error);
+    let list_count = ob::ob_stream_profile_list_count(depth_profiles, &mut error);
     check_error(error);
-    if listCount > 0 {
+    if list_count > 0 {
         if !color_profile.is_null() {
             // Select the profile with the same frame rate as color.
             let color_fps = ob::ob_video_stream_profile_fps(color_profile, &mut error);
             check_error(error);
             depth_profile = ob::ob_stream_profile_list_get_video_stream_profile(
-                depthProfiles,
+                depth_profiles,
                 ob::OB_WIDTH_ANY as c_int,
                 ob::OB_HEIGHT_ANY as c_int,
                 ob::OBFormat_OB_FORMAT_UNKNOWN,
@@ -125,7 +128,7 @@ pub unsafe fn do_the_thing() {
         if depth_profile.is_null() {
             // If no matching profile is found, select the default profile.
             depth_profile = ob::ob_stream_profile_list_get_profile(
-                depthProfiles,
+                depth_profiles,
                 ob::OB_PROFILE_DEFAULT as c_int,
                 &mut error,
             );
@@ -166,6 +169,7 @@ pub unsafe fn do_the_thing() {
 
     // Loop to get the frame and save the point cloud
     loop {
+        bevy::prelude::info!("count: {}", count);
                 count          = 0;
                 points_created = false;
                 // Limit up to 10 repetitions
@@ -259,6 +263,6 @@ pub unsafe fn do_the_thing() {
     ob::ob_delete_stream_profile_list(color_profiles, &mut error);
     check_error(error);
 
-    ob::ob_delete_stream_profile_list(depthProfiles, &mut error);
+    ob::ob_delete_stream_profile_list(depth_profiles, &mut error);
     check_error(error);
 }

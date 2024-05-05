@@ -1,0 +1,2 @@
+[05/04 17:07:31.644914][error][141093][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/04 17:46:53.450956][error][296271][PointCloudFilter.cpp:149] no color frame found in frameset!
