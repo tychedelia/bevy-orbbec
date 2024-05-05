@@ -1,2 +1,54 @@
 [05/04 17:07:31.644914][error][141093][PointCloudFilter.cpp:149] no color frame found in frameset!
 [05/04 17:46:53.450956][error][296271][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:41:37.944050][error][2581314][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:42:18.647128][error][2585004][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:42:39.392883][error][2587056][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:42:52.875526][error][2588587][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:43:07.488675][error][2590100][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:43:22.633080][error][2591614][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:43:36.042294][error][2593091][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:44:52.372962][error][2599433][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:46:33.191958][error][2608378][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:46:56.212776][error][2610619][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:48:01.599384][error][2616213][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:48:49.375708][error][2620445][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:49:47.756365][error][2625550][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:50:08.907717][error][2627641][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 13:51:07.756975][error][2632956][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 13:51:35.916764][error][2635204][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 13:52:33.099341][error][2640264][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:02:34.641190][error][2689677][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:03:12.268503][error][2692927][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 14:03:26.616712][error][2694955][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 14:03:43.091862][error][2696617][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:03:50.821395][error][2697362][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:04:28.394933][error][2700711][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:05:04.494789][error][2704035][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:05:23.579471][error][2705948][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:05.467622][error][2714601][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:19.347379][error][2716210][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:52.773646][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:53.468519][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:54.102910][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:54.747002][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:55.387707][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:56.039981][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:56.693905][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:57.486024][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:58.428000][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:07:59.372707][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:08:00.324604][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:08:01.285101][error][2719294][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:15:49.438026][error][2760347][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:16:19.266165][error][2763144][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:17:20.912461][error][2768676][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 14:17:37.591781][error][2770491][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:18:06.083485][error][2773314][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:18:29.032827][error][2775692][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:18:46.513470][error][2777348][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:19:11.135593][error][2779729][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:19:39.023840][error][2782302][PointCloudFilter.cpp:24] Invalid type, the pointType must be OB_FORMAT_POINT or OB_FORMAT_RGB_POINT
+[05/05 14:22:17.756432][error][2795752][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 14:28:40.582561][error][2830213][PointCloudFilter.cpp:149] no color frame found in frameset!
+[05/05 14:28:43.611582][error][2830213][PointCloudFilter.cpp:149] no color frame found in frameset! [**46 logs in 3029ms**]
+[05/05 14:28:49.618194][error][2830213][PointCloudFilter.cpp:149] no color frame found in frameset! [**90 logs in 6006ms**]

@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy" }
+bevy = "0.13.2"
+bevy_panorbit_camera = "0.18.0"
 orbbec-sdk = { path = "../orbbec-sdk-rs"}
 bytemuck = "1.15.0"
