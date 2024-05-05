@@ -1,5 +1,5 @@
 [package]
-name = "orbbec-bevy"
+name = "bevy-orbbec"
 version = "0.1.0"
 edition = "2021"
 
